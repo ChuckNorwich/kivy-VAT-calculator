@@ -1,0 +1,59 @@
+<Gui>:
+
+    net: net
+    vat: vat
+    total: total
+
+    GridLayout:
+        cols:1
+        size: root.width -100, root.height -50
+        pos: 50, 50
+        Label:
+            text: ' Enter Net, VAT ot Total and press Calculate \n                VAT calculated at 20%'
+
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text:'Net'
+                bold: True
+
+            TextInput:
+                id: net
+                multiline: False
+
+            Label:
+                text:'VAT'
+                bold: True
+
+            TextInput:
+                id: vat
+                multiline: False
+
+            Label:
+                text:'Total'
+                bold: True
+
+            TextInput:
+                id: total
+                multiline: False
+
+        Button:
+            text: 'Calculate'
+            bold: True
+            size: 250, 75
+            size_hint: None, None
+            on_press: root.calculate()
+
+        Button:
+            text: 'Clear'
+            bold: True
+            size: 250, 75
+            size_hint: None, None
+            on_press: root.clear()
+
+
+
+
+
